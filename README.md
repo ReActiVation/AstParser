@@ -1,0 +1,148 @@
+# AstParser
+
+**NO LONGER WORKS. TRADING PLATFORM FIXED THIS ISSUE**
+
+Application sends search request to find information about trading lot on platrorm Sberbank-AST.
+
+Platform returns more informaiton than it displays so it can only be retrived directly from response data. 
+This software helps to retrive this information and display in user friendly format.
+
+Filter template file should be located inside **misc** folder in binary root directory.
+
+**Filter file template:**
+```
+<elasticrequest>
+    <personid>0</personid>
+    <buid>0</buid>
+    <filters>
+        <mainSearchBar>
+            <value></value>
+            <type>best_fields</type>
+            <minimum_should_match>100%</minimum_should_match>
+        </mainSearchBar>
+        <purchAmount>
+            <minvalue></minvalue>
+            <maxvalue></maxvalue>
+        </purchAmount>
+        <PublicDate>
+            <minvalue></minvalue>
+            <maxvalue></maxvalue>
+        </PublicDate>
+        <PurchaseStageTerm>
+            <value></value>
+            <visiblepart></visiblepart>
+        </PurchaseStageTerm>
+        <SourceTerm>
+            <value></value>
+            <visiblepart></visiblepart>
+        </SourceTerm>
+        <RegionNameTerm>
+            <value></value>
+            <visiblepart></visiblepart>
+        </RegionNameTerm>
+        <RequestStartDate>
+            <minvalue></minvalue>
+            <maxvalue></maxvalue>
+        </RequestStartDate>
+        <RequestDate>
+            <minvalue></minvalue>
+            <maxvalue></maxvalue>
+        </RequestDate>
+        <AuctionBeginDate>
+            <minvalue></minvalue>
+            <maxvalue></maxvalue>
+        </AuctionBeginDate>
+        <okdp2MultiMatch>
+            <value></value>
+        </okdp2MultiMatch>
+        <okdp2tree>
+            <value></value>
+            <productField></productField>
+            <branchField></branchField>
+        </okdp2tree>
+        <classifier>
+            <visiblepart></visiblepart>
+        </classifier>
+        <orgCondition>
+            <value></value>
+        </orgCondition>
+        <orgDictionary>
+            <value></value>
+        </orgDictionary>
+        <organizator>
+            <visiblepart></visiblepart>
+        </organizator>
+        <CustomerCondition>
+            <value></value>
+        </CustomerCondition>
+        <CustomerDictionary>
+            <value></value>
+        </CustomerDictionary>
+        <customer>
+            <visiblepart></visiblepart>
+        </customer>
+        <PurchaseWayTerm>
+            <value></value>
+            <visiblepart></visiblepart>
+        </PurchaseWayTerm>
+        <PurchaseTypeNameTerm>
+            <value></value>
+            <visiblepart></visiblepart>
+        </PurchaseTypeNameTerm>
+        <BranchNameTerm>
+            <value></value>
+            <visiblepart></visiblepart>
+        </BranchNameTerm>
+        <IsSMPTerm>
+            <value></value>
+            <visiblepart></visiblepart>
+        </IsSMPTerm>
+        <AdRequirementEnable>
+            <value></value>
+            <visiblepart></visiblepart>
+        </AdRequirementEnable>
+        <statistic>
+            <totalProc>9+169+953</totalProc>
+            <TotalSum>25.14+Трлн.</TotalSum>
+            <DistinctOrgs>76+774</DistinctOrgs>
+        </statistic>
+    </filters>
+    <fields>
+        <field>TradeSectionId</field>
+        <field>purchAmount</field>
+        <field>purchCurrency</field>
+        <field>purchCodeTerm</field>
+        <field>PurchaseTypeName</field>
+        <field>purchStateName</field>
+        <field>BidStatusName</field>
+        <field>OrgName</field>
+        <field>SourceTerm</field>
+        <field>PublicDate</field>
+        <field>RequestDate</field>
+        <field>RequestStartDate</field>
+        <field>RequestAcceptDate</field>
+        <field>EndDate</field>
+        <field>CreateRequestHrefTerm</field>
+        <field>CreateRequestAlowed</field>
+        <field>purchName</field>
+        <field>BidName</field>
+        <field>SourceHrefTerm</field>
+        <field>objectHrefTerm</field>
+        <field>needPayment</field>
+        <field>IsSMP</field>
+        <field>isIncrease</field>
+    </fields>
+    <sort>
+        <value>default</value>
+        <direction></direction>
+    </sort>
+    <aggregations>
+        <empty>
+            <filterType>filter_aggregation</filterType>
+            <field></field>
+        </empty>
+    </aggregations>
+    <size>20</size>
+    <from>0</from>
+</elasticrequest>
+```
