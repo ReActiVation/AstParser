@@ -1,6 +1,6 @@
 # AstParser
 
-**NO LONGER WORKS. TRADING PLATFORM FIXED THIS ISSUE**
+**NO LONGER WORKS. TRADING PLATFORM FIXED THIS ISSUE.**
 
 Application sends search request to find information about trading lot on platrorm Sberbank-AST.
 
